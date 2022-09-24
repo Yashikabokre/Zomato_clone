@@ -5,12 +5,12 @@
   font-family: "Poppins", sans-serif;
 }
 
-.hero__section{
+.hero_section{
   background: url("images/heroSectionBackground.png");
   background-size: cover;
   background-position: center;
   color: white;
-  min-height: 50vh;
+  min-height: 60vh;
 }
 
 .navbar{
@@ -26,12 +26,12 @@
   color: white;
 }
 
-.navbar__menu_container{
+.navbar_menu_container{
   display: flex;
   gap: 20px;
 }
 
-.navbar__menu_container .user__icon{
+.navbar_menu_container .user__icon{
   height: 30px;
   width: 30px;
   justify-content: center;
@@ -41,7 +41,7 @@
   display: none;
 }
 
-.hero__section_container{
+.hero_section_container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,18 +50,18 @@
   height: calc(60vh -60px);
 }
 
-.hero__section_logo{
+.hero_section_logo{
   width: 220px;
   height: auto;
 }
 
-.hero__section_title{
+.hero_section_title{
   text-align: center;
   font-size: 30px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
-.hero__section_input_container {
+.hero_section_input_container {
   background-color: white;
   padding: 10px;
   display: flex;
@@ -69,12 +69,12 @@
   justify-items: center;
   gap: 10px;
   width: 60%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .input_container_location,
 .input_container_search{
-  padding: 10px;
+  padding: 5px;
   outline: none;
   border: none;
 }
@@ -85,7 +85,7 @@
 }
 
 .input_container_search{
-  width: 60%;
+  width: 65%;
 }
 
 @media only screen and (max-width: 600px){
@@ -101,12 +101,12 @@
     padding: 16px;
   }
 
-  .hero__section{
+  .hero_section{
     min-height: 80vh;
   }
 
 
-  .hero__section_input_container{
+  .hero_section_input_container{
     flex-direction: column;
     background-color: transparent;
     width: 100%;
@@ -116,16 +116,16 @@
   .input_container_search{
     padding: 15px;
     border-radius: 10px;
-    width: 85%;
+    width: 95%;
   }
 
-  .hero__section_container{
+  .hero_section_container{
     height: calc(80vh - 60px);
   }
 
-  .hero__section_title{
-    font: 20px;
-    width: 80%;
+  .hero_section_title{
+    font-size: 20px;
+    width: 95%;
   }
 }
 
@@ -155,7 +155,7 @@
 
 .we_offer_card img{
   width: 100%;
-  height: 170px;
+  height: 160px;
   object-fit: cover;
   object-position: center;
 }
@@ -171,7 +171,6 @@
 
 .we_offer_content p {
   font-size: 12px;
-  color: gray;
 }
 
 .collection h1{
@@ -240,6 +239,7 @@
     rgba(0, 0, 0, 0.05) 50%,
     rgba(0, 0, 0, 0.05) 85%
   );
+  z-index: 5;
 }
 
 .collection_card_container .card .content{
@@ -249,11 +249,12 @@
   color: white;
   padding: 12px, 16px;
   font-size: 0.9rem;
+  z-index: 6;
 }
 
 .content h4 {
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .get__the_app{
@@ -520,4 +521,70 @@
   .navigation_container{
     grid-template-columns: 1fr;
   }
+}
+
+.location_title{
+  color: black;
+  font-weight: 400;
+  margin-bottom: 25px;
+  text-align: left;
+  font-size: 35px;
+}
+
+.location_card_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1px;
+  margin: 1px;
+  width: 70%;
+}
+
+.location_box p{
+  font-weight: 400;
+}
+
+.location_box{
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  padding: 8px;
+  border: 1px solid rgb(196, 193, 193);
+  margin: 1px;
+} 
+
+.location_box_place{
+  font-weight: 200;
+}
+
+.drop_button{
+  color: black;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_content{
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+
 }
